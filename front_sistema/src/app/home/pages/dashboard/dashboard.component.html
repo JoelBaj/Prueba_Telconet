@@ -1,0 +1,57 @@
+<app-sidemenu></app-sidemenu>
+<div class="container">
+  <h1 class="titulo">Control de Acceso de Visitantes</h1>
+  <br>
+  <form [formGroup]="visitaFormulario" (ngSubmit)="guardar()">
+    <div class="form-group">
+      <label for="cedula">Cédula</label>
+      <input type="number" id="cedula" formControlName="cedula" class="form-control" placeholder="Ingrese la cédula">
+    </div>
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" formControlName="nombre" class="form-control" placeholder="Ingrese el nombre">
+    </div>
+    <div class="form-group">
+      <label for="apellido">Apellido</label>
+      <input type="text" id="apellido" formControlName="apellido" class="form-control" placeholder="Ingrese el apellido">
+    </div>
+    <div class="form-group">
+      <label for="razon">Razón de la Visita</label>
+      <input type="text" id="razon" formControlName="razon" class="form-control" placeholder="Ingrese la razón de la visita">
+    </div>
+    <div class="form-group">
+      <label for="contacto">Número de Contacto</label>
+      <input type="text" id="contacto" formControlName="contacto" class="form-control" placeholder="Ingrese el número de contacto">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Guardar</button>    
+  </form>
+  <br>
+  <table class="table table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>#</th>
+        <th>Cédula</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Razón de la Visita</th>
+        <th>Número de Contacto</th>
+        <th>Acciones</th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of visitante; let i = index" class="animate__animated animate__fadeIn animate__faster">
+        <td>{{ i + 1 }}</td>
+        <td>{{ item.cedula }}</td>
+        <td>{{ item.nombre }}</td>
+        <td>{{ item.apellido }}</td>
+        <td>{{ item.razon }}</td>
+        <td>{{ item.contacto }}</td>
+        <td>
+          <button class="btn btn-warning btn-sm" (click)="editar(i)">Editar</button>
+          <button class="btn btn-danger btn-sm" (click)="eliminar(i)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,41 @@
+<div class="center">
+    <h1 class="title">Registro Residente</h1>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+      <div class="txt_field">
+        <input type="number" formControlName="identificacion" placeholder="Ingrese una identificación">
+        <span></span>
+        <label>Identificación</label>
+      </div>
+      <div class="txt_field">
+        <input type="text" formControlName="nombre" placeholder="Ingrese su nombre">
+        <span></span>
+        <label>Nombre</label>
+      </div>
+      <div class="txt_field">
+        <input type="text" formControlName="apellido" placeholder="Ingrese su apellido">
+        <span></span>
+        <label>Apellido</label>
+      </div>
+      <div class="txt_field">
+        <input type="text" formControlName="placa" placeholder="Ingrese su placa vehículo">
+        <span></span>
+        <label>Placa Vehículo</label>
+      </div>
+      <div class="txt_field">
+        <input type="text" formControlName="username" placeholder="Ingrese nuevo username">
+        <span></span>
+        <label>Username</label>
+      </div>
+      <div class="txt_field">
+        <input type="password" formControlName="password" placeholder="Ingrese nueva contraseña">
+        <span></span>
+        <label>Contraseña</label>
+      </div>
+      <input class="ingresar" type="submit" value="Registrar">
+      <div class="signup_link">
+        ¿Ya tienes cuenta?
+        <a [routerLink]="['/auth/login']"> - ir a login - </a>
+      </div>
+    </form>
+  </div>
+  

@@ -1,0 +1,55 @@
+li{
+    cursor: pointer;
+    
+}
+
+.navbar {
+    background-color: #123577;
+    height: 75px;
+
+}
+
+a.navbar-brand {
+    font-weight: 500;
+    color: #fff;
+    font-size: 24px;
+    transition: 0.3s color;
+    font-weight: bold;
+}
+
+button.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+button.navbar-toggler:focus,
+button.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+   
+}
+
+.nav-link {
+    color: #ffffff;
+    font-weight: 500;
+    position: relative;
+    font-weight: bold;
+    
+}
+
+.nav-link:hover, 
+.nav-link.active {
+    color: #8bc7ff;
+}
+.offcanvas-title{
+    font-weight: bold;
+}
+
+@media(max-width: 991px) {
+    button.logout {
+        margin-top: 125%;
+    }
+}
+.logout{
+    color: #fff;
+}
